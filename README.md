@@ -76,7 +76,27 @@ ___
 
 ___
 
+### 10.复选框列表
+- [x] 我被勾选
+- [x] 我也被勾选
+- [ ] 我没有
+- [ ] 我没有
 
+___
+
+### 11.列表
+
+左对齐 | 居中 | 右对齐
+:----- | :--: | ----:
+aa | bb | cc
+
+___
+
+图片 | 描述
+---- | ----
+[![baidu]](https://www.baidu.com) | 百度
+
+[baidu]: https://github.com/RJPig/test/raw/master/imgs/baidu.jpg
 ### 表情
 使用`::`将符号码包含起来
 :cow::beer:
