@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>动态伪类选择器</title>
+</head>
+<body>
+    <style>
+        div {
+            padding: 25px;
+            background-color: pink;
+            text-align: center;
+        }
+
+
+        div:hover {
+            background-color: red;
+        }
+
+        a {
+            text-decoration: none;
+            position: relative;
+            left: 50%
+        }
+        a:link {
+            color:green
+        }
+
+        a:visited {
+            color:red
+        }
+
+        a:hover {
+            color: indigo;
+        }
+
+        a:active {
+            color:magenta;
+        }
+
+        input {
+            outline: none;
+        }
+
+        input:disabled {
+            border: solid 1px #dddddd !important
+        }
+
+        input:hover {
+            background-color: darksalmon;
+        }
+
+        input:checked+label {
+            color:royalblue;
+        }
+
+        input:required {
+            border: solid 1px red;
+        }
+
+        input:optional {
+            border: solid 1px green;
+        }
+    </style>
+    <a href="https://www.bilibili.com" target="_blank">哔哩哔哩</a><hr>
+    <input type="text" value="失去焦点时变色" required><br>
+    <input type="text"><br>
+    <input type="text" disabled><hr>
+    <input type="radio" name="sex" id="man" checked>
+    <label for="man">男</label>
+    <input type="radio" name="sex" id="woman">
+    <label for="woman">女</label><hr>
+    <div>鼠标移到该位置自动变色</div>
+</body>
+</html>

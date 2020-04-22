@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>css选择器练习</title>
+    <style>
+        body {
+            background-color:#d1feff;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+
+        .expan {
+            text-align: center;
+            color:coral
+        }
+
+        .content {
+            text-indent: 2em;
+        }
+
+        img {
+            width: 200px;
+        }
+
+        #ol {
+            color: red;
+        }
+
+        span.content{
+            color: yellowgreen;
+        }
+
+        p,span {
+            font-style: italic;
+        }
+
+
+
+        p::selection {
+            background-color:gray;
+            color: lightpink;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h2>乱数假文</h2>
+    <p class="expan">由随机字母组合而成的内容</p>
+    <p class="content"><span id="ol">Lorem</span> ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem quo atque sed quod maxime? <span class="content">Eligendi</span> odit molestiae similique. Optio commodi animi dolores minus voluptate tenetur ad! Delectus tempore ullam culpa!</p>
+    <p class="content"><span id="ol">Lorem</span> ipsum dolor sit amet consectetur, adipisicing elit. Porro accusamus numquam aliquam neque nostrum voluptas ratione nihil <span class="content">totam</span> voluptatum tempora, dignissimos, animi et recusandae suscipit eius voluptatem corporis ipsam vitae?<span id="ol">Lorem</span> ipsum dolor sit, amet consectetur adipisicing elit. Maxime ex fugiat in nihil labore porro deserunt eum sed atque non. Corporis unde minima asperiores beatae ducimus iste laborum nesciunt inventore?</p>
+    <img src="../text_imgs/1.jpg" alt="等风吹和我">
+    <img src="../text_imgs/2.jpg" alt="一起调戏方丈">
+    <img src="../text_imgs/3.jpg" alt="互相壁咚">
+</body>
+</html>

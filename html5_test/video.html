@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>视频相关操作界面(倍速)</title>
+</head>
+<body>
+    <video id="video" src="E:/BaiduNetdiskDownload/dva.mov" controls width="640" poster="../imgs/希尔薇.jpg">抱歉,所选视频已找不到资源</video>
+    <p>播放速率:<select id="selRate">
+        <option value="0.5">0.5</option>
+        <option value="1" selected>1</option>
+        <option value="1.25">1.25</option>
+        <option value="1.5">1.5</option>
+        <option value="2">2</option>
+    </select></p>
+    <button onclick="playPause()">播放/暂停</button>
+    <button onclick="makeBig()">放大</button>
+    <button onclick="makeSmall()">缩小</button>
+    <button onclick="makeNormal()">正常</button>
+    <script>
+        var rate = document.getElementById('selRate');
+        var videos = document.getElementById('video');
+        function playPause(){
+            if (videos.paused)
+                videos.play();
+            else
+                videos.pause();
+        }
+
+        function makeBig(){
+            videos.width = 960;
+        }
+
+        function makeSmall(){
+            videos.width = 320;
+        }
+
+        function makeNormal(){
+            videos.width = 640;
+        }
+        rate.addEventListener('change',function(){
+            videos.playbackRate = this.value;
+
+        });
+    </script>
+</body>
+</html>
