@@ -72,7 +72,7 @@ ___
 ### 9.插入图片
 [![bilibili]](https://www.bilibili.com)
 
-[bilibili]:https://github.com/RJPig/test/imgs/timg.gif
+[bilibili]:imgs/timg.gif
 
 ___
 
