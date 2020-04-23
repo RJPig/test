@@ -48,18 +48,22 @@
     }
     div:nth-child(1) {
       background-color: aqua;
-      transform: perspective(900px) rotateY(45deg);
+      transform: perspective(900px);
       
     }
 
     div:nth-child(2) {
       background-color:blueviolet;
-      transform: perspective(900px) rotateY(45deg) translate3d(0%, 0%, 0px);
+      transform: perspective(900px) rotate(45deg) translate3d(0%, 0%, 0px);
+      
     }
 
     main:hover div:nth-child(2) {
-      transform: perspective(900px) rotateY(45deg) translate3d(100%, 100%, 200px);
-      
+      transform: perspective(900px) rotateY(-45deg) translate3d(100%, 100%, 100px);
+    }
+
+    main:hover div:nth-child(1) {
+      transform: perspective(900px) rotateY(45deg) translate3d(-100%, -100%, -100px);
     }
 
 

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    main {
+      /* display: flex;
+      justify-content: center;
+      align-items: center; */
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    main ul {
+      display: flex;
+      list-style: none;
+    }
+
+    ul li {
+      margin-right: 10px;
+    }
+    ul li strong {
+      color: white;
+      background: #3498db;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+    main ul li strong+div {
+      display: flex;
+      flex-direction: column;
+      background: #bdc3c7;
+      margin-top: 5px;
+      transform: scale(0);
+      /* visibility: hidden; */
+      /* 修改缩放基点 */
+      transform-origin: left top;
+      transition: .5s;
+    }
+
+    li div a{
+      color: white;
+      text-decoration: none;
+    }
+
+    ul li:hover strong+div {
+      transform: scale(1);
+      /* visibility: visible; */
+    }
+
+    ul li:hover strong {
+      background: #2980b9;
+    }
+
+    li div a:hover {
+      background: #95a5a6;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <ul>
+      <li>
+        <strong>videos</strong>
+        <div>
+          <a href="">HDFS</a>
+          <a href="">HADOOP</a>
+        </div>
+      </li>
+      <li>
+        <strong>images</strong>
+        <div>
+          <a href="">HDFS</a>
+          <a href="">HADOOP</a>
+        </div>
+      </li>
+    </ul>
+  </main>
+</body>
+</html>
