@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0
+    }
+
+    body {
+      background: #2c3e50;
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+    }
+
+    main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    div {
+      width: 250px;
+      height: 250px;
+      margin-right: 10px;
+      overflow: hidden;
+      border: solid 2px silver;
+      transition: 1s;
+    }
+
+    div>img {
+      width: 100%;
+      height: 100%;
+      filter: blur(8px);
+    }
+    
+    div>img:hover {
+      filter: none;
+    }
+    main:hover div {
+      transform: scale(.6);
+    }
+
+    main:hover div:hover {
+      transform: scale(1.5);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div>
+      <img src="../../imgs/qnyh/全家福.png" alt="全家福" title="全家福">
+
+    </div>
+    <div>
+      <img src="../../imgs/qnyh/乱花渐欲迷人眼.jpg" alt="" title="">
+
+    </div>
+    <div>
+      <img src="../../imgs/qnyh/荡秋千.jpg" alt="" title="">
+
+    </div>
+    <div>
+      <img src="../../imgs/qnyh/壁咚.jpg" alt="" title="">
+
+    </div>
+    <div>
+      <img src="../../imgs/qnyh/落花人独立.jpg" alt="" title="">
+
+    </div>
+  </main>
+
+</body>
+</html>

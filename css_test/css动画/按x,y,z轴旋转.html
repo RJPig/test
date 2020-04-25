@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #2c3e50;
+    }
+    main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    main>div {
+      width: 300px;
+      height: 300px;
+      border: solid 1px black;
+      margin-right: 20px;
+      transform-style: preserve-3d;
+    }
+
+    main>div div {
+      transition: 2s;
+    }
+    .craft {
+      width: 150px;
+      height: 150px;
+      position: relative;
+      top: 25%;
+      left: 25%;
+    }
+    /* 黑色边框向左倾斜 */
+    main>div:nth-child(1) {
+      transform: perspective(900px) rotateY(-45deg);
+    }
+    main>div:nth-child(2) {
+      transform: perspective(900px) rotateY(-45deg);
+    }
+    main>div:nth-child(3) {
+      transform: perspective(900px) rotateY(-45deg);
+    }
+
+    /* 设置内部小方块颜色 */
+    div:nth-child(1) .craft {
+      background-color: #2ecc71;
+    }
+    div:nth-child(2) .craft {
+      background-color: #3498db;
+    }
+    div:nth-child(3) .craft {
+      background-color: #9b59b6;
+    }
+
+    /* 当鼠标移上时,发生旋转 */
+    main>div:hover #green {
+      transform: perspective(900px) rotateX(360deg);
+    }
+    main>div:hover #bule {
+      transform: perspective(900px) rotateY(360deg);
+    }
+    main>div:hover #purple {
+      transform: perspective(900px) rotateZ(360deg);
+      /* z轴旋转的另一种写法 */
+      /* transform: perspective(900px) rotate(360deg); */
+    }
+
+  </style>
+</head>
+<body>
+  <main>
+      <div>
+        <div class="craft" id="green">X轴旋转</div>
+      </div>
+
+
+
+      <div>
+        <div class="craft" id="bule">Y轴旋转</div>
+      </div>
+
+
+      <div>
+        <div class="craft" id="purple">Z轴旋转</div>
+      </div>
+  </main>
+</body>
+</html>
