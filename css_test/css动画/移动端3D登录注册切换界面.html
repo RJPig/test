@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src=""></script>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    main {
+      width: 100vw;
+      height: 100vh;
+      transform-style: preserve-3d;
+      transform: perspective(900px);
+      transition: 1s;
+    }
+
+    body:hover main {
+      transform: perspective(900px) rotateY(180deg);
+    }
+
+    /* .register:active main {
+      transform: perspective(900px) rotateY(0deg);
+    }
+
+    .login:active main {
+      transform: perspective(900px) rotateY(180deg);
+    } */
+    div {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 4em;
+      text-transform: uppercase;
+      backface-visibility: hidden;
+    }
+    div:nth-child(1) {
+      background: #3498db;
+    }
+
+    div:nth-child(2) {
+      background: #2ecc71;
+      transform: rotateY(180deg);
+    }
+
+    nav {
+      position: absolute;
+      bottom: 75px;
+      width: 100%;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    nav a {
+      text-decoration: none;
+      padding: 10px;
+      color: white;
+      background: #2c3e50;
+    }
+
+    nav a:nth-of-type(1) {
+      margin-right: 5px;
+    }
+    nav a:nth-of-type(2) {
+      margin-left: 5px;
+    }
+
+
+  </style>
+</head>
+<body>
+  <main>
+    <div>login</div>
+    <div>register</div>
+  </main>
+  <nav id="app">
+    <a href="" class="register">注册</a>
+    <a href="" class="login">登录</a>
+  </nav>
+</body>
+</html>

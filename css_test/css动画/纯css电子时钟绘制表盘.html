@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #2c3e50;
+    }
+
+    main {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: #3498db;
+      position: relative;
+    }
+
+    .clock::after {
+      content: '';
+      width: 90%;
+      height: 90%;
+      top: 50%;
+      left: 50%;
+      border-radius: 50%;
+      background: #2c3e50;
+      position: absolute;
+      transform: translate(-50%, -50%);
+      z-index: -1;
+    }
+
+    .line {
+      width: 80%;
+      height: 80%;
+      /* background: black; */
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .line::before {
+      content: '';
+      width: 90%;
+      height: 90%;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      position: absolute;
+      background: #2c3e50;
+      z-index: 2;
+    }
+
+    .line::after {
+      content: '';
+      width: 5%;
+      height: 5%;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      position: absolute;
+      background: #ecf0f1;
+      z-index: 3;
+    }
+    .line>div {
+      width: 8px;
+      height: 100%;
+      position: absolute;
+      background: #ecf0f1;
+      left: 50%;
+    }
+
+    .line>div:nth-of-type(1) {
+      transform: translateX(-50%) rotate(30deg)
+    }
+    .line>div:nth-of-type(2) {
+      transform: translateX(-50%) rotate(60deg)
+    }
+    .line>div:nth-of-type(3) {
+      transform: translateX(-50%) rotate(90deg)
+    }
+    .line>div:nth-of-type(4) {
+      transform: translateX(-50%) rotate(120deg)
+    }
+    .line>div:nth-of-type(5) {
+      transform: translateX(-50%) rotate(150deg)
+    }
+    .line>div:nth-of-type(6) {
+      transform: translateX(-50%) rotate(180deg)
+    }
+
+    .hour {
+      width: 8px;
+      height: 15%;
+      bottom: 50%;
+      position: absolute;
+      transform-origin: bottom;
+      transform: translate(-50%) rotate(30deg);
+      background: #ecf0f1;
+      left: 50%;
+    }
+    .minute {
+      width: 6px;
+      height: 25%;
+      bottom: 50%;
+      position: absolute;
+      transform: translate(-50%);
+      transform-origin: bottom;
+      background: #ecf0f1;
+      left: 50%;
+    }
+    .second {
+      width: 4px;
+      height: 40%;
+      bottom: 50%;
+      position: absolute;
+      transform: translate(-50%);
+      transform-origin: bottom;
+      background: #ecf0f1;
+      left: 50%;
+      transition: 10s;
+    }
+
+    main:hover .second {
+      transform: translateX(-50%) rotate(360deg);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="clock">
+      <div class="line">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="hour"></div>
+      <div class="minute"></div>
+      <div class="second"></div>
+    </div>
+  </main>
+</body>
+</html>

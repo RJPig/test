@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+
+    body {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #2c3e50;
+    }
+    main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 200px;
+      border: solid 3px #9b59b6;
+    }
+
+    main a {
+      text-decoration: none;
+      color: #ecf0f1;
+      font-size: 1.5em;
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 40px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 100%;
+      transform: skew(45deg);
+      background: #9b59b6;
+      z-index: -1;
+      transition: .5s;
+    }
+
+    a:hover::after{
+      width: 200%;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <a href="">
+      <strong>b</strong>ili<strong>b</strong>ili
+    </a>
+  </main>
+</body>
+</html>
