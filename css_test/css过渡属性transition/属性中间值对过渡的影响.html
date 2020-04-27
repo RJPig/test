@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #2c3e50;
+    }
+    main {
+      width: 300px;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      background: #3498db;
+      border: 20px solid #2ecc71;
+    }
+
+    div {
+      border: 20px solid #27ae60;
+      background: #2980b9;
+      width: 150px;
+      height: 150px;
+    }
+
+
+    main,div {
+      transition: 2s;
+    }
+    main:hover {
+      border-radius: 0%;
+    }
+
+    main:hover div {
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div></div>
+  </main>
+</body>
+</html>
