@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <style>
+    span{
+      color: white
+    }
+  </style>
+  <script>
+    function fuc(row=5) {
+        for (let i = 1; i <row; i++) {
+        for (let n = row-i; n > 0; n--) {
+          document.write("<span>-</span>");
+        }
+        for (let m = i*2-1; m > 0; m--) {
+          document.write("*");
+        }
+        document.write("<br/>");
+      }
+    }
+    fuc(20)
+
+  </script>
+</body>
+</html>
