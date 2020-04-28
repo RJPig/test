@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      width: 100vw;
+      height: 100vh;
+      background: #2c3e50;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    main {
+      width: 300px;
+      height: 300px;
+      display: flex;
+      position: relative;
+      justify-self: center;
+      align-self: center;
+      overflow: hidden;
+      border-radius: 10%;
+      border: 3px solid silver;
+    }
+
+    section {
+      width: 1500px;
+      height: 300px;
+      display: grid;
+      grid-template: 1fr/repeat(5,300px);
+      animation-name: slide;
+      animation-duration: 8s;
+      animation-timing-function: steps(5,end);
+      animation-iteration-count: infinite;
+      animation-play-state: running;
+    }
+
+    /* 当鼠标移动到上面暂停轮播 */
+    section:hover, section:hover+ul::after {
+      animation-play-state: paused;
+    }
+
+
+    div {
+      overflow: hidden;
+    }
+
+    /* main:hover {
+      transform: scale(1.5);
+    } */
+    img {
+      height: 100%;
+      width: 100%;
+    }
+
+    @keyframes slide {
+      to {
+        transform: translateX(-1500px);
+      }
+    }
+
+    @keyframes num {
+      to {
+        transform: translateX(150px);
+      }
+    }
+
+    ul {
+      position: absolute;
+      width: 150px;
+      left: 50%;
+      bottom: 20px;
+      transform: translateX(-50%);
+      justify-items: center;
+      display: grid;
+      grid-template: 1fr/repeat(5, 1fr);
+      list-style: none;
+    }
+
+    ul::after {
+      content: '';
+      position: absolute;
+      left: 5px;
+      top: 0;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: rgba(0, 0, 0, .8);
+      z-index: -1;
+      animation-name: num;
+      animation-duration: 8s;
+      animation-timing-function: steps(5,end);
+      animation-iteration-count: infinite;
+      animation-play-state: running;
+
+    }
+    li {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: rgba(0, 0, 0, .3);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section>
+      <div><img src="../../imgs/qnyh/全家福.png" alt=""></div>
+      <div><img src="../../imgs/qnyh/乱花渐欲迷人眼.jpg" alt=""></div>
+      <div><img src="../../imgs/qnyh/荡秋千.jpg" alt=""></div>
+      <div><img src="../../imgs/qnyh/壁咚.jpg" alt=""></div>
+      <div><img src="../../imgs/qnyh/落花人独立.jpg" alt=""></div>
+    </section>
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+    </ul>
+  </main>
+</body>
+</html>

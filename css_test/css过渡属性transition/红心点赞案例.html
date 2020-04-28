@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    main {
+      width: 100px;
+      height: 100px;
+      position: relative;
+      /* border: 3px solid red; */
+      /* display: flex;
+      justify-content: center;
+      align-items: center; */
+    }
+
+    i.fa {
+      font-size: 100px;
+      position: absolute;
+      color: #bdc3c7;
+      transition: 1s;
+    }
+
+    .heart i.fa {
+      transform: scale(3);
+      color: #e74c3c;
+      opacity: 0;
+    }
+    .heart i.fa:nth-child(2) {
+      transform: scale(1);
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <main onclick="heart()">
+    <i class="fa fa-heart"></i>
+    <i class="fa fa-heart"></i>
+  </main>
+  <script>
+    function heart() {
+      $("main").toggleClass('heart');
+    }
+  </script>
+</body>
+</html>

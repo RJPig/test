@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #2c3e50;
+    }
+
+    main {
+      width: 500px;
+      height: 500px;
+      border: 2px solid silver;
+    }
+
+    div {
+      background: #2ecc71;
+      /* border-radius: 50%; */
+      width: 100px;
+      height: 100px;
+      animation-name: transform, background;
+      animation-duration: 5s;
+      /* 循环次数;infinite循环执行*/
+      animation-iteration-count: 2;
+    }
+
+    @keyframes transform {
+
+      25% {
+        transform: translateX(400px);
+      }
+
+      50% {
+        transform: translate(400px, 400px);
+      }
+
+      75% {
+        transform: translateY(400px);
+
+      }
+
+      /* 有共同属性时可以用如下的组合写法 */
+      /* 25%,
+      75% {
+        background: #e74c3c;
+        border-radius: 50%;
+      } */
+    }
+
+    @keyframes background {
+
+      25% {
+        background: #1abc9c;
+      }
+
+      50% {
+        background: #3498db;
+      }
+
+      75% {
+        background: #f1c40f;
+      }
+
+      /* 有共同属性时可以用如下的组合写法 */
+      /* 25%,
+      75% {
+        background: #e74c3c;
+        border-radius: 50%;
+      } */
+      }    
+  </style>
+</head>
+<body>
+  <main>
+    <div></div>
+  </main>
+</body>
+</html>
