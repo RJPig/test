@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let str = 'asssssssssssffadfedff';
+    let json = {};
+    for (let i = 0; i < str.length; i++) {
+      // console.log(i);
+      if (!json[str.charAt(i)]) {
+        json[str.charAt(i)] = 1;
+      }else{
+        json[str.charAt(i)]++;
+      }
+    };
+    let max = 0;
+    let index = '';
+    for (let i in json) {
+      if (json[i] > max) {
+        max = json[i];
+        index = i;
+      }
+    }
+    console.log(index+":"+max);
+    
+  </script>
+</body>
+</html>
