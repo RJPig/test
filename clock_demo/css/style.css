@@ -84,6 +84,7 @@ body {
   flex: 1;
 }
 #clockset .set-main .settime {
+  padding: 15px;
   display: flex;
 }
 #clockset .set-main .settime .timeitem {
