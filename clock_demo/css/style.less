@@ -1,9 +1,13 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
-
+@font-face {
+  font-family: "clockicons";
+  src: url(clockicons.woff2) format("opentype");
+}
 body {
   width: 100vw;
   height: 100vh;
@@ -12,31 +16,26 @@ body {
   justify-content: center;
   align-items: center;
 }
-main {
+#clockbody, #clockset {
   width: 500px;
   height: 400px;
   background: #ecf0f1;
   position: relative;
-  display: flex;
+}
+#clockbody {
+  // display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
-  // .menu {
-  //   position: absolute;
-  //   display: flex;
-  //   top: 0;
-  //   right: 0;
-  //   background: red;
-  //   div {
-  //     flex: 1;
-  //     font-size: 23px;
-  //     display: inline-block;
-  //     // width: 50px;
-  //   }
-  //   .btn-share::before {
-  //     content: '\e616';
-      
-  //   }
-  // }
+  overflow: hidden;
+
+  .title {
+    position: absolute;
+    font-size: 50px;
+    font-weight: 200;
+    top: 50px;
+    display: inline;
+  }
   #datetime,#date {
     color: #555;
     font-weight: 300;
@@ -48,6 +47,7 @@ main {
   #datetime {
     width: 100%;
     font-size: 75px;
+    font-family: clockicons,sans-serif;
   }
   #date {
     position: absolute;
@@ -56,9 +56,10 @@ main {
     width: 100%;
     font-size: 25px;
   }
-  .start-clock {
+  .btn-clock {
     position: absolute;
-    bottom: 50px;
+    bottom: 30px;
+    transition: 5s;
     button {
       background-color: #27ae60;
       padding: 10px;
@@ -67,4 +68,46 @@ main {
       cursor: pointer;
     }
   }
+
 }
+  #clockset {
+    display: flex;
+    flex-direction: column;
+    // display: none;
+
+    .set-title {
+      background: #3498db;
+      color: #fff;
+      font-size: 25px;
+      font-weight: 100;
+      text-align: center;
+      padding: 10px
+    }
+    .set-main {
+      flex: 1;
+      .settime {
+        display: flex;
+        .timeitem {
+          flex: 1
+        }
+      }
+    }
+    .set-bottom {
+      text-align: right;
+      padding: 20px;
+      button {
+        padding: 10px 30px;
+        border: #27ae60;
+        cursor: pointer;
+      }
+      button:nth-of-type(1) {
+        color: #555;
+        background: #bdc3c7;
+        margin-right: 10px;
+      }
+      button:nth-of-type(2) {
+        color: #fff;
+        background-color: #27ae60;
+      }
+    }
+  }
