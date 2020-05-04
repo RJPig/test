@@ -84,11 +84,15 @@ body {
   flex: 1;
 }
 #clockset .set-main .settime {
-  padding: 15px;
   display: flex;
+  padding: 15px;
 }
 #clockset .set-main .settime .timeitem {
   flex: 1;
+}
+#clockset .set-main .settime .timeitem select {
+  width: 50%;
+  height: 25px;
 }
 #clockset .set-bottom {
   text-align: right;
