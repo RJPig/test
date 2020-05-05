@@ -23,7 +23,7 @@ body {
   position: relative;
 }
 #clockbody {
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
@@ -35,7 +35,7 @@ body {
   top: 50px;
   display: inline;
 }
-#clockbody #datetime,
+#clockbody #time,
 #clockbody #date {
   color: #555;
   font-weight: 300;
@@ -44,7 +44,7 @@ body {
   justify-content: center;
   align-items: center;
 }
-#clockbody #datetime {
+#clockbody #time {
   width: 100%;
   font-size: 75px;
   font-family: clockicons, sans-serif;
@@ -69,8 +69,8 @@ body {
   cursor: pointer;
 }
 #clockset {
-  display: flex;
   flex-direction: column;
+  display: none;
 }
 #clockset .set-title {
   background: #3498db;
@@ -82,18 +82,21 @@ body {
 }
 #clockset .set-main {
   flex: 1;
+  padding: 15px;
   border-bottom: 1px solid #e5e5e5;
 }
 #clockset .set-main .settime {
   display: flex;
+  justify-content: center;
   padding: 15px;
 }
 #clockset .set-main .settime .timeitem {
-  flex: 1;
+  margin-right: 10px;
 }
-#clockset .set-main .settime .timeitem select {
-  width: 50%;
+#clockset .set-main .settime .timeitem input {
+  width: 120px;
   height: 25px;
+  border: 0;
 }
 #clockset .set-main .music {
   padding: 15px;
@@ -111,16 +114,6 @@ body {
 }
 #clockset .set-main .music .file audio {
   flex: 1;
-}
-#clockset .set-main .clockname {
-  padding: 10px;
-}
-#clockset .set-main .clockname input {
-  padding: 10px;
-  margin-top: 10px;
-  width: 100%;
-  height: 45px;
-  border: 0;
 }
 #clockset .set-bottom {
   text-align: right;
