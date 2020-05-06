@@ -8,11 +8,12 @@ window.onload = function() {
   // 获取输入框id
   const onhour = document.getElementById("hour");
   const onminute = document.getElementById("minute");
-  let h,m,s;
+  let h,m;
   // 每一秒刷新一次
   const timer = setInterval(() => {
     clock()
   }, 1000);
+
   function clock() {
     // 调用Date()函数获得当地日期,时间
     let date = new Date();
@@ -21,6 +22,7 @@ window.onload = function() {
     let day = date.getDate();
   
     let hour = date.getHours();
+    // 当分钟和秒小于10时自动改为: 0 => 00
     let minute = date.getMinutes()>9?date.getMinutes():"0"+date.getMinutes();
     let second = date.getSeconds()>9?date.getSeconds():"0"+date.getSeconds();
   
@@ -38,20 +40,26 @@ window.onload = function() {
       // 获取输入框的值
       h = onhour.value;
       m = onminute.value;
-      // s = onsecond.value;
-      document.getElementById("clockset").style.display = 'none';
-      document.getElementById("clockbody").style.display = 'flex';
-      console.log(h + ":" + m);
-      alert("设置成功")
+      // 当点击开始按钮时,弹出设置成功按钮,并关闭设置界面,返回时间显示界面
+      
+      // console.log(h + ":" + m);
+      if(h != "" && m != "") {
+        alert("设置成功");
+        document.getElementById("clockset").style.display = 'none';
+        document.getElementById("clockbody").style.display = 'flex';
+      }else{
+        alert("请设置时间")
+      }
     }
 
     if((hour == h) && (minute == m)) {
       const audio = document.getElementById("audio");
       audio.play();
-      alert("闹钟响了")
+      // alert("闹钟响了")
     }else{
       audio.pause();
     }
+
   }
   // 当页面加载完时调用上面的clock()函数
   clock()
@@ -73,6 +81,7 @@ function closeset() {
 function onInputFilePath() {
   let file = document.getElementById("file").files[0];
   let url = URL.createObjectURL(file);
+  // 将上传的文件真实路径传给audio的src属性
   document.getElementById("audio").src = url;
   // console.log(url);
 }

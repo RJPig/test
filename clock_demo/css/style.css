@@ -16,8 +16,7 @@ body {
   align-items: center;
 }
 #clockbody,
-#clockset,
-#closeall {
+#clockset {
   width: 500px;
   height: 400px;
   background: #ecf0f1;
