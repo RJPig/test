@@ -16,7 +16,8 @@ body {
   align-items: center;
 }
 #clockbody,
-#clockset {
+#clockset,
+#closeall {
   width: 500px;
   height: 400px;
   background: #ecf0f1;
@@ -59,7 +60,6 @@ body {
 #clockbody .btn-clock {
   position: absolute;
   bottom: 30px;
-  transition: 5s;
 }
 #clockbody .btn-clock button {
   background-color: #27ae60;

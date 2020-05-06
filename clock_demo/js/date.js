@@ -8,8 +8,6 @@ window.onload = function() {
   // 获取输入框id
   const onhour = document.getElementById("hour");
   const onminute = document.getElementById("minute");
-  const onsecond = document.getElementById("second");
-
   let h,m,s;
   // 每一秒刷新一次
   const timer = setInterval(() => {
@@ -35,26 +33,29 @@ window.onload = function() {
     time.innerHTML = T;
     DT.innerHTML = D;
     
+    // 点击开始按钮,弹出设置成功提示窗,并回到时间显示界面
     beginclock.onclick = function() {
       // 获取输入框的值
       h = onhour.value;
       m = onminute.value;
-      s = onsecond.value;
+      // s = onsecond.value;
       document.getElementById("clockset").style.display = 'none';
       document.getElementById("clockbody").style.display = 'flex';
-      console.log(h + ":" + m + ":" + s);
+      console.log(h + ":" + m);
       alert("设置成功")
     }
 
-    if((hour == h) && (minute == m) && (second == s)) {
-      // document.getElementById("audio").;
-      alert("叮叮叮")
+    if((hour == h) && (minute == m)) {
+      const audio = document.getElementById("audio");
+      audio.play();
+      alert("闹钟响了")
+    }else{
+      audio.pause();
     }
   }
   // 当页面加载完时调用上面的clock()函数
   clock()
 }
-
 
 // 当点击设置闹钟按钮时,display:none时间显示的界面,打开设置界面
 function openset() {
@@ -62,7 +63,11 @@ function openset() {
   document.getElementById("clockbody").style.display = 'none';
 
 }
-
+// 当点击设置页面的取消按钮时,返回时间显示界面
+function closeset() {
+  document.getElementById("clockset").style.display = 'none';
+  document.getElementById("clockbody").style.display = 'flex';
+}
 
 // 获取上传文件地址
 function onInputFilePath() {
