@@ -10,7 +10,7 @@
 
 ___
 ### 2.字体格式强调
-使用一对`**`或者__将文字包含在内的效果：
+使用一对`**`或者`_ _`将文字包含在内的效果：
 *强调（斜体）*
 _强调（斜体）_
 ___
@@ -62,6 +62,7 @@ ___
 ___
 
 ### 8.缩进
+使用`>`
 >我  
 >>是
 >>>缩
@@ -70,13 +71,14 @@ ___
 ___
 
 ### 9.插入图片
-[![bilibili]](https://www.bilibili.com)
+[![bilibili]](https://www.bilibili.com "bilibili")
 
 [bilibili]:https://github.com/RJPig/test/raw/master/imgs/timg.gif
 
 ___
 
 ### 10.复选框列表
+使用`- []`
 - [x] 我被勾选
 - [x] 我也被勾选
 - [ ] 我没有
@@ -91,7 +93,7 @@ ___
 aa | bb | cc
 
 ___
-
+例子：
 图片 | 描述
 ---- | ----
 [![baidu]](https://www.baidu.com) | 百度
