@@ -12,16 +12,20 @@
     </style>
 </head>
 <body>
-    <img src="./imgs/qnyh/壁咚.jpg" alt="">
+    <img src="../imgs/qnyh/壁咚.jpg" alt="">
 </body>
 <script>
+    // querySelector元素选择器
     let myImage = document.querySelector('img');
     myImage.onclick = function () {
+        // 获取属性值
         let mySrc = myImage.getAttribute('src');
-        if (mySrc === './imgs/qnyh/壁咚.jpg') {
-            myImage.setAttribute('src', './imgs/qnyh/荡秋千.jpg')
+        if (mySrc === '../imgs/qnyh/壁咚.jpg') {
+            // 判断src的值是否等于原始图像的路径，如果是，则改为第二张图片路径
+            myImage.setAttribute('src', '../imgs/qnyh/荡秋千.jpg')
         } else {
-            myImage.setAttribute('src', './imgs/qnyh/壁咚.jpg')
+            // 如果不等于原始图像的路径，则改为原始路径
+            myImage.setAttribute('src', '../imgs/qnyh/壁咚.jpg')
         }
     }
 </script>
