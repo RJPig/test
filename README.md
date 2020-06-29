@@ -89,13 +89,13 @@ ___
 ### 11.列表
 
 左对齐 | 居中 | 右对齐
-:----- | :--: | ----:
+:---- | :--: | ----:
 aa | bb | cc
 
 ___
 例子：
 图片 | 描述
----- | ----
+:----: | :----:
 [![baidu]](https://www.baidu.com) | 百度
 
 [baidu]: https://github.com/RJPig/test/raw/master/imgs/baidu.jpg

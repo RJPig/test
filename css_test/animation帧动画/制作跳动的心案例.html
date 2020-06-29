@@ -6,21 +6,6 @@
   <title>Document</title>
   <link rel="stylesheet" href="../../css/bodycenter.css">
   <style>
-    /* * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      width: 100vw;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: #2c3e50;
-    } */
-
     main {
       display: flex;
     }
@@ -30,8 +15,11 @@
       background: #e74c3c;
       opacity: .4;
       transform: rotate(45deg) scale(.5);
+      /* 帧动画 */
       animation-name: scale;
+      /* 每间隔一秒循环一次 */
       animation-duration: 1s;
+      /* 循环次数：infinte为无限循环 */
       animation-iteration-count: infinite;
       /* 结束后定格在最后一帧 */
       /* animation-fill-mode: forwards; */
