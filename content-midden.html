@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .first-change, .second-change, .threeth-change, .fourth-change, .fifth-change {
+      margin-bottom: 20px;
+    }
+
+    .first-change, .second-change, .threeth-change {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      position: relative;
+    }
+    .fourth-change {
+      height: 100px;
+      background-color: red;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .fifth-change {
+      background-color: red;
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+      width: 100px;
+      height: 100px;
+    }
+    .first-item {
+      background-color: #cccc;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .second-item {
+      background-color: #cccc;
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      left: 50%;
+      top: 50%;
+      margin-left: -25px;
+      margin-top: -25px;      
+    }
+
+    .three-item {
+      background-color: #cccc;
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto;
+    }
+
+    .fourth-item {
+      background-color: #cccc;
+      width: 50px;
+      height: 50px;
+    }
+
+    .fifth-item {
+      background-color: #cccc;
+    }
+
+
+  </style>
+</head>
+<body>
+  <div class="first-change">
+    <div class="first-item">1</div>
+  </div>
+
+  <div class="second-change">
+    <div class="second-item">2</div>
+  </div>
+
+  <div class="threeth-change">
+    <div class="three-item">3</div>
+  </div>
+
+  <div class="fourth-change">
+    <div class="fourth-item">4</div>
+  </div>
+
+  <div class="fifth-change">
+    <div class="fifth-item">5</div>
+  </div>
+
+</body>
+</html>
