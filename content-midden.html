@@ -31,6 +31,7 @@
       width: 100px;
       height: 100px;
     }
+    /* 第一种方法：父元素使用相对定位+知道父元素的width和height的情况下 */
     .first-item {
       background-color: #cccc;
       position: absolute;
@@ -38,6 +39,7 @@
       top: 50%;
       transform: translate(-50%, -50%);
     }
+    /* 第二种方法：父元素使用相对定位+知道父元素的width和height的情况下 */
     .second-item {
       background-color: #cccc;
       position: absolute;
@@ -48,7 +50,7 @@
       margin-left: -25px;
       margin-top: -25px;      
     }
-
+    /* 第三种方法：父元素使用相对定位+知道父元素的width和height的情况下 */
     .three-item {
       background-color: #cccc;
       position: absolute;
@@ -60,13 +62,13 @@
       right: 0;
       margin: auto;
     }
-
+    /* 第四种方法：display：flex */
     .fourth-item {
       background-color: #cccc;
       width: 50px;
       height: 50px;
     }
-
+    /* 第五种方法：display：table-cell */
     .fifth-item {
       background-color: #cccc;
     }

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>order属性的使用</title>
+  <style>
+    #main {
+      display: flex;
+    }
+    #main > article {
+      width: 200px;
+      order: 2;
+      background-color: aqua;
+    }
+    #main > nav {
+      flex: 1;
+      order: 1;
+      background-color: blueviolet;
+    }
+    #main > aside {
+      width: 200px;
+      order: 3;
+      background-color: chartreuse;
+    }
+  </style>
+</head>
+<body>
+  <div id="main">
+    <article>article...</article>
+    <nav>nav...</nav>
+    <aside>aside...</aside>
+  </div>
+</body>
+</html>
